@@ -10,7 +10,7 @@ using namespace std;
 unsigned long long fac(unsigned int n);
 
 int main() {
-    //unsigned int n;
+    unsigned int n;
 
     cout << fixed << setprecision(0);
 
