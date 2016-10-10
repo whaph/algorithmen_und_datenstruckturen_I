@@ -16,7 +16,7 @@ int main() {
 
     cout << setw(10) << "n" << setw(30) << "Fakultaet von n" << endl << "\n";
 
-    for (unsigned int n = 1; n <= N_MAX ; ++n){
+    for (n = 1; n <= N_MAX ; ++n){
         cout << setw(10) << n << setw(30) << fac(n) << endl;
     }
 
