@@ -5,11 +5,12 @@
 
 using namespace std;
 
-// declaring function for conversion from color to string
-string colorString(enum color color);
 
 // enums for colors
 enum color { red, green, blue};
+
+// declaring function for conversion from color to string
+string colorString(enum color color);
 
 // structure for a colored 2D-cartesian-point
 struct point {
@@ -19,10 +20,14 @@ struct point {
     point(int xval, int yval, enum color colorval) :
             x(xval), y(yval), color(colorval) {}
 
-    void printPoint(struct point p){
+
+    // function for printing a point by reference
+    void printPoint() const{
         cout << "((" << this->x << ","<< this->y << "),"<< colorString(this->color) << ")" << endl;
     };
 };
+
+
 
 // defining function for conversion from color to string
 string colorString(enum color color)
@@ -36,7 +41,7 @@ string colorString(enum color color)
 
         case blue:
             return "blue";
-            
+
         default:
             return "unknown color";
     }
@@ -53,6 +58,8 @@ int main(){
 
     point *pp4 = new point(12,13,red);
 
-    p1.printPoint(p1);
+    p1.printPoint();
+
+    point p5(p1);
 
 }
